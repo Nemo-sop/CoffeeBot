@@ -1,0 +1,22 @@
+version: '3.10'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: coffee-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: coffee-frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    restart: unless-stopped

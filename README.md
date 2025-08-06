@@ -69,6 +69,13 @@ GEMINI_API_KEY=tu_clave_de_gemini
 LOG_LEVEL=INFO
 APP_ENV=development
 ```
+Para que el bot pueda generar respuestas, es necesario tener una clave de API de Google Gemini.
+1. Ingresá a https://aistudio.google.com/app/apikey
+2. Iniciá sesión con una cuenta de Google
+3. Generá una nueva API Key
+
+⚠️ Por motivos de seguridad y buenas prácticas, no se incluye ninguna clave de API en este repositorio. Cada persona que desee ejecutar la app debe generar su propia clave de acceso gratuita
+
 ---
 
 ## 🧠 Consideraciones

@@ -126,6 +126,11 @@ Aclaración importante:
 - La arquitectura es completamente compatible con Modal
 
 La opción de usar Modal fue analizada y documentada como una mejora factible para superar la limitación de memoria sin romper el diseño base
+
+- Front desplegado en Render: https://coffeebot-frontend-mlbj.onrender.com
+- Back no esta pudiendo ser cargado en el free tier de Render:
+<img width="805" height="149" alt="image" src="https://github.com/user-attachments/assets/9a094168-66ef-4aa6-9776-5672b4890631" />
+
  
  ---
  

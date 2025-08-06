@@ -40,8 +40,8 @@ cd CoffeeBot
 docker compose up --build
 ```
 Esto expondrá:
-http://localhost:8000 → API de FastAPI
-http://localhost:8501 → Interfaz en Streamlit
+- http://localhost:8000 → API de FastAPI
+- http://localhost:8501 → Interfaz en Streamlit
 
 ### 🧪 Opción B: correr manualmente 
 
@@ -76,6 +76,13 @@ El PDF se carga e indexa al iniciar la API. Esto puede tomar unos segundos la pr
 La validación de respuestas es estricta: si el bot responde en inglés o con baja relevancia, se regenera automáticamente la respuesta hasta un maximo de 3 veces.
 No se usa una base vectorial externa: FAISS funciona en memoria para facilitar despliegue rápido.
 No se permite hablar de temas no relacionados al café ni en otro idioma que no sea el español. El bot lo expresará explícitamente.
+
+La aplicación no incluye aún archivos YAML de Kubernetes, pero su arquitectura y contenedores están preparados para ser desplegados fácilmente en cualquier clúster.
+Tanto el frontend (Streamlit) como el backend (FastAPI) están dockerizados por separado.
+La comunicación entre servicios está desacoplada mediante HTTP (API_URL), lo cual facilita el enrutamiento vía Services o Ingress.
+Las variables sensibles están separadas y podrían mapearse fácilmente a ConfigMaps o Secrets.
+
+⚠️ Si bien no se entregan los manifiestos K8s en este repositorio por una cuestión de foco y tiempo estimado del assignment, la migración a Kubernetes es directa y trivial en caso de ser necesario.
 
 ---
 ## 🚧 TODOs / Mejoras futuras

@@ -1,0 +1,11 @@
+faiss-cpu
+sentence-transformers
+PyMuPDF
+loguru
+google-generativeai
+fastapi
+uvicorn[standard]
+python-dotenv
+langdetect
+pytest
+httpx
